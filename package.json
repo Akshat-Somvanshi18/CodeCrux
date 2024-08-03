@@ -10,8 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "natural": "^7.1.0",
     "node-modules": "^1.0.1",
+    "number-to-words": "^1.2.4",
     "remove-punctuation": "^0.0.4",
-    "stopword": "^3.0.1"
+    "stopword": "^3.0.1",
+    "string-similarity": "^4.0.4",
+    "wink-lemmatizer": "^3.0.4",
+    "words-to-numbers": "^1.5.1"
   }
 }
