@@ -272,6 +272,7 @@ app.get("/search", (req, res) => {
 
 app.get("/question/:id", (req, res) => {
   const id = Number(req.params.id);
+  console.log(id);
   const str = path.join(__dirname, "Problems");
   const str1 = path.join(str, `problem_text_${id + 1}.txt`);
   let text = fs.readFileSync(str1).toString();
