@@ -10,27 +10,23 @@ CodeMaster is a powerful search engine specifically designed to process and rank
 ## Key Features
 - **Efficient Search Mechanism**: Uses TF-IDF and BM25 algorithms to rank documents by relevance to user queries.
 - **Advanced Text Processing**: Handles complex cases like spelling corrections, camel casing, lemmatization, and numeric equivalences.
-- **Web Scraping**: Collects DSA problems from popular platforms like LeetCode and InterviewBit using Selenium.
 - **Real-Time Ranking**: Scores and ranks documents dynamically, prioritizing trusted sources and showing the top 10 results.
 
 ---
 
 ## Workflow
 
-### 1. Data Extraction
-- **Web Scraping**: Automates the collection of DSA problems using Selenium from trusted sources like LeetCode and InterviewBit.
-
-### 2. Keyword Generation and Scoring
+### 1. Keyword Generation and Scoring
 - **Traditional String Matching**: Provides a basic approach but struggles with scalability.
 - **Term Frequency (TF)**: Counts keyword occurrences but tends to favor longer documents.
 - **Inverse Document Frequency (IDF)**: Adjusts scores by emphasizing rare terms across documents.
 - **TF-IDF**: Combines TF and IDF to determine the importance of keywords effectively.
 
-### 3. Normalization and BM25 Scoring
+### 2. Normalization and BM25 Scoring
 - **Normalization**: Accounts for document length to remove bias.
 - **BM25**: Balances keyword influence to avoid overemphasis on specific terms.
 
-### 4. Text Processing and Query Handling
+### 3. Text Processing and Query Handling
 - **Preprocessing**: Cleans query text by removing stopwords, punctuation, and applying lowercase transformation.
 - **Keyword Extraction**: Identifies relevant terms while ignoring unrelated content.
 - **Edge Cases**:
@@ -39,7 +35,7 @@ CodeMaster is a powerful search engine specifically designed to process and rank
   - Splitting camel-cased words (e.g., "twoSum" to "two sum").
   - Lemmatization for accurate word matching.
 
-### 5. Search and Ranking
+### 4. Search and Ranking
 - **Query Processing**: Extracts and processes query keywords, then computes TF-IDF scores.
 - **Cosine Similarity**: Measures the closeness of the query and documents.
 - **Title Similarity**: Adds weight to documents with titles that closely match the query.
@@ -65,15 +61,14 @@ CodeMaster is a powerful search engine specifically designed to process and rank
 
 ## How to Use
 1. **Install Dependencies**: Ensure all required packages and libraries are installed.
-2. **Run the Scraper**: Use Selenium to collect DSA problems from supported sources.
-3. **Start the Application**: Launch the search engine and input your queries to retrieve ranked results.
-4. **Explore Results**: View the top 10 most relevant documents based on your search.
+2. **Start the Application**: Launch the search engine and input your queries to retrieve ranked results.
+3. **Explore Results**: View the top 10 most relevant documents based on your search.
 
 ---
 
 ## Technologies Used
 - **Backend**: Node.js
-- **Frontend**: (Optional integration, if any)
+- **Frontend**: ejs template engine
 - **Text Processing**: TF-IDF, BM25
 - **Storage**: RAM-based indexing for fast access
 
