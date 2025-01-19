@@ -28,9 +28,6 @@ const stringSimilarity = require("string-similarity");
 // Module to convert word to numbers
 const { wordsToNumbers } = require("words-to-numbers");
 
-/**
- * Reading Required Arrays
- */
 
 //Reading the IDF Array
 const IDF = require("./idf");
@@ -239,7 +236,7 @@ app.get("/search", (req, res) => {
 
   for (let i = 0; i < 10; i++) {
     if (arr[i].sim != 0) nonZero++;
-    const str = path.join(__dirname, "Problems");
+    const str = path.join(__dirname, "problems");
     const str1 = path.join(str, `problem_text_${arr[i].id + 1}.txt`);
     let question = fs.readFileSync(str1).toString().split("\n");
     let n = question.length;
@@ -273,7 +270,7 @@ app.get("/search", (req, res) => {
 app.get("/question/:id", (req, res) => {
   const id = Number(req.params.id);
   console.log(id);
-  const str = path.join(__dirname, "Problems");
+  const str = path.join(__dirname, "problems");
   const str1 = path.join(str, `problem_text_${id + 1}.txt`);
   let text = fs.readFileSync(str1).toString();
   // console.log(text);
@@ -322,21 +319,4 @@ app.listen(port, () => {
   console.log("Server is runnning on port " + port);
 });
 
-// Binary Search Tree -> ['binary', 'search', 'tree', 'orange'] -> ['binary', 'search', 'tree']
-// Keywords -> []
-// const score = [];
-// for(const document of documents) {
-// bm25
-// score.push({id: document_id, score: bm25})
-// }
 
-// O(N*W)
-// score.sort((a, b) => {
-//  return b.score-a.score;
-// })
-
-// for(let i=0; i< 10; i++){
-// console.log(document[score[i]._id]);
-//}
-//
-//
